@@ -102,7 +102,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
     font-weight: 400;
     color: var(--very-dark-grayish-blue);
 }
