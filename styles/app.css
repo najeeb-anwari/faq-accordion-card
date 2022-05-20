@@ -63,6 +63,7 @@ main {
 }
 /* Illustration Image on mobile screen */
 .illustration-img {
+    content: url("../images/illustration-woman-online-mobile.svg");
     position: absolute;
     top: -100px;
     width: 220px;
