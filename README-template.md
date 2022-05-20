@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/najeeb-anwari/faq-accordion-card)
-- Live Site URL: [Live View](https://your-live-site-url.com)
+- Live Site URL: [Live View](https://najeeb-anwari.github.io/faq-accordion-card/)
 
 ## My process
 
