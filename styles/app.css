@@ -1,0 +1,184 @@
+/* Global Styles 
+-------------------*/
+
+:root {
+    /* Primary Text*/
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    /* background gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    /* Neutral TEST */
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    /* Dividers */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+
+    --card-max-size: calc(375px - 2rem);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 2rem;
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    font-size: 12px;
+    font-family: 'Kumbh Sans';
+    padding-top: 70px;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+/* Main Section Starts 
+-----------------------*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* Card */
+.card {
+    display: grid;
+    justify-items: center;
+    position: relative;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-size: 220px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 1.5rem;
+    max-width: var(--card-max-size);
+    background-color: white;
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    
+    
+}
+/* Illustration Image on mobile screen */
+.illustration-img {
+    position: absolute;
+    top: -100px;
+    width: 220px;
+}
+/* Card Content Wrapper */
+.card .wrapper {
+    padding: 2rem;
+    margin-top: 6rem;
+    grid-area: faqs;
+}
+.card h1 {
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+/* FAQs Section */
+.card ul.faqs {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+}
+
+.card .faq-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.faqs .faq-answer p {
+    line-height: 1.5;
+    margin-bottom:1rem;
+    color: var(--dark-grayish-blue);
+}
+
+.faq-header {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--very-dark-grayish-blue);
+}
+
+.toggler-icon {
+    color: var(--soft-red);
+    transition: .4s;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    
+}
+
+.faq-item.active .faq-header {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+.faq-item:hover .faq-header {
+    color: var(--soft-red);
+    cursor: pointer;
+}
+
+.faq-item.active .toggler-icon {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100%;
+    transition: .3s;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Media Queries
+--------------------- */
+
+@media (min-width: 850px) {
+    body {
+        padding: 4rem;
+    }
+
+    .card {
+        width:  calc(2 * var(--card-max-size) + 2 * 5rem);
+        max-width: 90%;
+        gap: 2rem;
+        grid-template-columns: 0  minmax(250px, calc(var(--card-max-size) + 2rem)) minmax(300px, calc(var(--card-max-size)));
+        grid-template-areas: "illustration nothing faqs";
+        background-image: url("../images/illustration-woman-online-desktop.svg"), 
+                        url("../images/bg-pattern-desktop.svg");
+        background-size: 50%, 60vw;
+        background-position: left -16% center, left -34vw bottom -14vh;
+        padding: 4rem 4rem 4rem 0;
+    }
+
+    .card .wrapper {
+        padding:0;
+        margin-top: 0rem;        
+    }
+
+    .card h1 {
+        text-align: left;
+    }
+    
+    /* Little box svg */
+    .illustration-img {
+        content: url("../images/illustration-box-desktop.svg");
+        position: static;
+        grid-area: illustration;
+        align-self: center;
+        width: 170px;
+        margin-left: 5px;
+        margin-top: 95px;
+
+    }
+}
