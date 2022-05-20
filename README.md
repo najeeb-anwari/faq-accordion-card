@@ -48,7 +48,8 @@ Users should be able to:
 ### Continued development
 
 I am still not comfortable with background image positioning, but still want do more practices to master it. I am good at flexbox but I still need to practice my grid skills.
-
+I also faced a problem with transitioning the height which was weird. But this amazing post helped me.
+[Using CSS Transitions on Auto Dimensions](https://css-tricks.com/using-css-transitions-auto-dimensions/)
 
 ### Useful resources
 
